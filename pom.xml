@@ -92,10 +92,10 @@
     <snapshotRepository>
       <id>nexusdeploymentrepo</id>
       <url>http://3.68.184.134:8081/repository/maven-snapshots/</url> <!-- Update the IP/Address to Your Nexus VM IP -->
-    </snapshotRepository>											  <!-- Mmake sure to create the "maven-snapshots" repo in Nexus -->
+    </snapshotRepository>											  
 	<repository>
 	  <id>nexusdeploymentrepo</id>
       <url>http://3.68.184.134:8081/repository/maven-releases/</url> <!-- Update the IP/Address to Your Nexus VM IP -->
-    </repository>													 <!-- Also make sure you have the above two or one repositories created -->
+    </repository>													 <!-- repos will be available by default in nexus -->
   </distributionManagement>
 </project>
