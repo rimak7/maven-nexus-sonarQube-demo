@@ -35,7 +35,12 @@ b) Install Nexus
  - Access nexus on **http://`<server-pub-ip>`:`8081`** 
 
     
-    ### configure nexus
+    
+### configure nexus
+
+- create nexus credential
+
+- optional Create custome repos
 
 
 
@@ -50,7 +55,11 @@ c) Install SonarQube
 - Access sonarqube on **http://`<server-pub-ip>`:`9000`** 
 
 
-     ### configure nexus
+### configure sonarQube
+
+- Set acess to sonarQube
+
+- configure a project and generate a token. 
 
 
 
@@ -65,8 +74,9 @@ update the following detains in settings.xml and pom.xml files.  (use gitHub UI 
 
 - server IPs for nexus and sonarServer
 
-2) (OPTIONA. this is just to show how java project templates are generated) Create a simple Java project using. 
+2) (OPTIONA. this is just to show how java project templates are generated). Create a simple Java project using the command below. 
 If done, you will have to update the pom.xml file. 
+
 
     mvn archetype:generate -DgroupId=com.example.demo -DartifactId=demoApp -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.5 -DinteractiveMode=false
 
@@ -74,8 +84,18 @@ If done, you will have to update the pom.xml file.
 
 4) cd into the Java project directory **demoApp** (folder with pom.xml and src directory)
 
+5) Move the settings.xml file to ~/.m2 directory
+
+     mv settings.xml ~/.m2 
+
+
 5) build and push the maven artifact to nexus using the deploy [build lifecycle](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html) command.
+
     mvn clean deploy 
+
+
+6) Push to SonarQube using the command gotten from the sonar configuration step above. 
+
 
 
 
