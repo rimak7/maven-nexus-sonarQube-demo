@@ -10,19 +10,19 @@ For this demo, create 3 ubuntu servers of size t3.medium,  with below specificat
 
 a) Install Maven
 
-    - tag instance : maven_demo
+- tag instance : maven_demo
 
-    NB: maven will run as background service so no ports on SG required
+NB: maven will run as background service so no ports on SG required
     
-    Install JAVA (a prerequisite for Jenkins)
+Install JAVA (a prerequisite for Jenkins)
 
-        sudo apt update && apt install openjdk-17-jre -y
+     sudo apt update && apt install openjdk-17-jre -y
 
-    Verify Java Installation 
-            java -version 
+Verify Java Installation 
+    java -version 
 
-    Install Maven
-        sudo apt install -y maven
+Install Maven
+    sudo apt install -y maven
 
 
 b) Install Nexus
@@ -60,18 +60,21 @@ c) Install SonarQube
 1) fork repo  https://github.com/mecbob/maven-nexus-sonarQube-demo/tree/main  and 
 
 update the following detains in settings.xml and pom.xml files.  (use gitHub UI for the updates)
-    - nexus credentials
-    - IPs for the nexus and sonarServer
 
-2) clone your repo on the maven server, where mvn can build the javabased project. 
+- nexus credentials
 
-4) Create a simple Java project using 
+- server IPs for nexus and sonarServer
+
+2) (OPTIONA. this is just to show how java project templates are generated) Create a simple Java project using. 
+If done, you will have to update the pom.xml file. 
 
     mvn archetype:generate -DgroupId=com.example.demo -DartifactId=demoApp -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.5 -DinteractiveMode=false
 
-3) cd into the Java project directory **demoApp** (folder with pom.xml and src directory)
+3) Clone your repo on the maven server, where mvn can build the javabased project. 
 
-4) build and push the maven artifact to nexus using the deploy [build lifecycle](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html) command.
+4) cd into the Java project directory **demoApp** (folder with pom.xml and src directory)
+
+5) build and push the maven artifact to nexus using the deploy [build lifecycle](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html) command.
     mvn clean deploy 
 
 
