@@ -34,7 +34,7 @@ Install Maven:
 
 
 
-b) Create [Nexus-Server] (https://help.sonatype.com/en/sonatype-nexus-repository.html): 
+b) Create [Nexus-Server](https://help.sonatype.com/en/sonatype-nexus-repository.html): 
 
 - create an EC2 server for nexus with above specifications 
 
@@ -57,7 +57,7 @@ b) Create [Nexus-Server] (https://help.sonatype.com/en/sonatype-nexus-repository
 
 
 
-c) Create EC2 and [Install-SonarQube] (https://www.sonarsource.com/products/sonarqube/downloads/)
+c) Create EC2 and [Install-SonarQube](https://www.sonarsource.com/products/sonarqube/downloads/)
 
 - create an EC2 server for nexus with above specifications 
 
