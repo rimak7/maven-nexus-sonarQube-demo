@@ -1,6 +1,3 @@
-# https://help.sonatype.com/en/sonatype-nexus-repository.html
-
-
 #!/bin/bash
 
 # Exit on any error
@@ -16,7 +13,6 @@ DATA_DIR="/opt/sonatype-work"
 sudo apt update -y && sudo apt upgrade -y
 
 # Install Java (required for Nexus Repository)
-#sudo apt install -y openjdk-17-jdk
 
 sudo apt install openjdk-17-jre -y
 
@@ -69,4 +65,5 @@ sudo systemctl start nexus
 
 # Verify Nexus service status
 sudo systemctl status nexus
+
 

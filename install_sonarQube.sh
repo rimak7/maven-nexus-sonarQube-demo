@@ -1,7 +1,3 @@
-
-# https://www.sonarsource.com/products/sonarqube/downloads/
-
-
 #!/bin/bash
 
 # Exit script on any error
@@ -63,22 +59,3 @@ sudo systemctl start sonarqube
 
 # Verify SonarQube service status
 sudo systemctl status sonarqube
-
-# Output message
-echo "SonarQube installation completed. Access it at http://<server-ip>:9000"
-
-
-
-
-/*
-# token: sqp_421177b75b8e571ead9a8774baed873d5a5c4a4b
-
-
-mvn clean verify sonar:sonar \
-  -Dsonar.projectKey=mvn-sonar \
-  -Dsonar.host.url=http://3.70.120.182:9000 \
-  -Dsonar.login=sqp_421177b75b8e571ead9a8774baed873d5a5c4a4b
-
-
-
-  mvn archetype:generate -DgroupId=com.example.demo -DartifactId=demoApp -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.5 -DinteractiveMode=false
