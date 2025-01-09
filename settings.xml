@@ -11,7 +11,7 @@
     <server>
       <id>nexusdeploymentrepo</id>    <!-- add credentials to your nexus -->
       <username>admin</username>
-      <password>admin</password>
+      <password>Rima2020$</password>
     </server>
   </servers>
   <mirrors>
